@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --c-main: #FF0000
+}
+
+html {
+    font-family: 'Nunito Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+.container {
+    max-width: 1088px;
+    margin: 0 auto;
+}
