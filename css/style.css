@@ -11,6 +11,11 @@ html {
     /* font-family: 'Open Sans', sans-serif; */
 }
 
+.hidden {
+    position: absolute;
+    left: -9999999px;
+}
+
 .container {
     max-width: 1088px;
     padding-left: 10px;
@@ -337,12 +342,8 @@ html {
 .form-row {
     margin-bottom: 20px;
 }
-.form label {
-    position: absolute;
-    left: -9999999px;
-}
-.form input,
-.form textarea {
+
+.form-control {
     height: 38px;
     width: 100%;
     border: 1px solid #d1d1d1;
@@ -353,4 +354,62 @@ html {
 .form textarea {
     height: 140px;
     padding: 10px;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.checkbox {
+    display: flex;
+}
+.checkbox-input {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.checkbox-input:focus,
+.form-control:focus {
+    border-color: var(--c-main);
+    box-shadow: 0px 3px 6px #FF00004D;
+    outline: none;
+}
+
+.checkbox-input:checked {
+    background-image: url("/images/icon-check.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.checkbox-text {
+    font-size: 12px;
+    font-family: 'Open Sans';
+    color: #B2B2B2;
+}
+
+.form-row--last {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-button {
+    width: 140px;
+    height: 40px;
+    border-radius: 40px;
+    border: 1px solid var(--c-main);
+    color: var(--c-main);
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    box-shadow: 0px 3px 6px #FF00004D;
+}
+
+.form-button:focus {
+    outline: none;
+    background: var(--c-main);
+    color: white;
 }
